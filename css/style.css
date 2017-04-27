@@ -57,11 +57,12 @@ header {
   width: 100%;
   height: 70vh;
   justify-content: center;
-  overflow: none; }
+  overflow: none;
+  margin-bottom: 0.4em; }
   header .main_pic {
-    margin: 0.4em;
     width: 100%;
     height: 100%;
+    margin: 0.4em;
     background: url(../pictures/background/workout3.jpg);
     background-position: center;
     background-size: cover;
@@ -83,32 +84,34 @@ header {
         flex-grow: 1;
         color: white;
         text-decoration: none;
-        border: 0.5px solid white;
         max-height: 40px;
         transition: .5s ease-out;
-        background-color: rgba(68, 68, 68, 0.5); }
+        background-color: #242943; }
         header .main_pic nav a:hover {
           transition: .5s ease;
-          background-color: #e50000; }
+          background-color: #e97770; }
         header .main_pic nav a:nth-child(6) {
-          background-color: #e50000;
+          background-color: #e97770;
           color: white; }
           header .main_pic nav a:nth-child(6):hover {
             transition: .5s ease;
-            background-color: black; }
+            background-color: #242943; }
     header .main_pic .Motivation h1 {
       font-size: 3em;
-      color: firebrick; }
+      color: black; }
+      header .main_pic .Motivation h1 span {
+        border: 1px solid black;
+        padding: 0.5em; }
 
 /* _-_-_-_-_  section Main _-_-_-_-_  */
 section.main {
-  margin-top: 0.4em;
+  padding: 0.4em;
   flex-direction: row; }
   section.main .workout {
-    margin: 0.4em;
-    width: 50%;
-    height: 300px;
-    background-image: url(../pictures/background/pic2.jpg);
+    margin-right: 0.4em;
+    width: 60%;
+    height: 30em;
+    background-image: url(../pictures/background/pic1.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat; }
@@ -116,14 +119,40 @@ section.main {
     width: 100%;
     flex-direction: column; }
     section.main .train .text1 {
-      margin: 0.2em 0.2em 0.2em 0;
-      background-color: #e50000;
       width: 100%;
       height: 100%;
-      border: 1px solid black; }
+      margin-bottom: 0.2em;
+      background-color: #242943;
+      justify-content: center;
+      align-items: center; }
+      section.main .train .text1 a {
+        text-decoration: none;
+        color: black;
+        padding: 1em;
+        border: 1px solid black; }
     section.main .train .text2 {
-      margin: 0.2em 0.2em 0.2em 0;
-      background-color: #e50000;
       width: 100%;
       height: 100%;
-      border: 1px solid black; }
+      margin-top: 0.2em;
+      background-image: url(../pictures/background/pic5.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat; }
+
+/* _-_-_-_-_  section Main2 _-_-_-_-_  */
+section.main2 {
+  flex-direction: row;
+  padding: 0 0.4em;
+  height: 25em; }
+  section.main2 .train2 {
+    width: 75%;
+    background-color: #242943;
+    margin-right: 0.2em; }
+  section.main2 .train3 {
+    width: 100%;
+    background-color: #242943;
+    margin-left: 0.2em;
+    background-image: url(../pictures/background/pic6.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; }
