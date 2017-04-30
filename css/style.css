@@ -31,19 +31,7 @@ table {
   border-spacing: 0; }
 
 /* _-_-_-_-_ Varables _-_-_-_-_  */
-/* _-_-_-_-_ Flexbox Grid _-_-_-_-_  */
-/* Parent */
-.row {
-  display: flex; }
-
-/* Parent */
-.col {
-  flex: 1;
-  padding: 0.6em;
-  margin: 0.6em;
-  color: #fff;
-  background-color: #33a6cc; }
-
+/* _-_-_-_-_ varables colors _-_-_-_-_  */
 /* _-_-_-_-_ Flexbox Container _-_-_-_-_  */
 .container {
   display: -webkit-box;
@@ -92,7 +80,7 @@ header {
           background-color: #e97770; }
         header .main_pic nav a:nth-child(6) {
           background-color: #e97770;
-          color: white; }
+          color: #ffffff; }
           header .main_pic nav a:nth-child(6):hover {
             transition: .5s ease;
             background-color: #242943; }
@@ -115,6 +103,9 @@ section.main {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat; }
+    @media (max-width: 50em) {
+      section.main .workout {
+        width: 100%; } }
   section.main .train {
     width: 100%;
     flex-direction: column; }
@@ -127,14 +118,14 @@ section.main {
       align-items: center; }
       section.main .train .text1 a {
         text-decoration: none;
-        color: black;
+        color: white;
         padding: 1em;
-        border: 1px solid black; }
+        border: 1px solid #ffffff; }
     section.main .train .text2 {
       width: 100%;
       height: 100%;
       margin-top: 0.2em;
-      background-image: url(../pictures/background/pic5.jpg);
+      background-image: url(../pictures/background/dumbbells-1634750_1280.jpg);
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat; }
@@ -147,7 +138,17 @@ section.main2 {
   section.main2 .train2 {
     width: 75%;
     background-color: #242943;
-    margin-right: 0.2em; }
+    margin-right: 0.2em;
+    justify-content: center;
+    align-items: center; }
+    @media (max-width: 50em) {
+      section.main2 .train2 {
+        width: 100%; } }
+    section.main2 .train2 a {
+      text-decoration: none;
+      color: white;
+      padding: 1em;
+      border: 1px solid #ffffff; }
   section.main2 .train3 {
     width: 100%;
     background-color: #242943;
@@ -156,3 +157,61 @@ section.main2 {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat; }
+
+/* _-_-_-_-_  section main-icons _-_-_-_-_  */
+section.main-icons {
+  flex-direction: column;
+  margin: 0.4em;
+  height: 40em;
+  justify-content: center;
+  align-items: center;
+  background-color: #242943; }
+  section.main-icons .icons_title {
+    width: 100%;
+    height: 15%;
+    border: 1px solid #ffffff;
+    justify-content: center;
+    align-items: center; }
+    section.main-icons .icons_title h2 {
+      font-size: 2em;
+      color: white;
+      border-bottom: 3px solid #e97770; }
+  section.main-icons .icons {
+    flex-wrap: wrap;
+    width: 90%;
+    height: 100%; }
+    section.main-icons .icons .icon_gym {
+      flex: 1 1 calc(33.33%);
+      display: flex;
+      border: 1px solid #ffffff;
+      width: 50%;
+      height: 50%;
+      justify-content: center;
+      align-items: center; }
+      section.main-icons .icons .icon_gym p {
+        color: #ffffff; }
+
+/* _-_-_-_-_  section Opinions _-_-_-_-_  */
+section.Opinions {
+  height: 30em;
+  width: 100%;
+  background-color: #242943; }
+
+/* _-_-_-_-_  section Map _-_-_-_-_  */
+section.Google_Map {
+  height: 25em;
+  width: 100%;
+  background-color: #242943; }
+  section.Google_Map .map {
+    width: 100%;
+    height: 100%;
+    background-image: url(../pictures/background/mapa%20google%20makieta.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; }
+
+/* _-_-_-_-_  Footer section _-_-_-_-_  */
+footer.contact {
+  height: 25em;
+  width: 100%;
+  background-color: #242943; }

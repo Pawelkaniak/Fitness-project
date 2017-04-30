@@ -3,18 +3,12 @@
 @import "modules/varables";
 @import "partials/main_header";
   
-/* _-_-_-_-_ Flexbox Grid _-_-_-_-_  */
+/* _-_-_-_-_ varables colors _-_-_-_-_  */
 
-/* Parent */
-.row {display: flex;}
-/* Parent */
-.col {
-  flex: 1;
-  padding: 0.6em;
-  margin: 0.6em;
-  color: #fff;
-  background-color: hsla(195, 60%, 50%, 1);
-}
+$mainFirst-color: #242943;
+$mainSecond-color: #e97770;
+$mainThird-color: #ffffff;
+
 
 /* _-_-_-_-_ Flexbox Container _-_-_-_-_  */
 .container {
@@ -25,9 +19,6 @@
   display: flex;
 }
 
-body {
-  //background-color: hsla(195, 60%, 50%, 1);
-}
 
 /* _-_-_-_-_ Header section _-_-_-_-_  */
 
@@ -52,6 +43,7 @@ header {
       margin: 0 0.4em;
       @media (max-width: 50em) {
         flex-direction: column;
+        //display: none;
       }
     a {
       margin: 0.3em;
@@ -64,17 +56,17 @@ header {
       text-decoration: none;
       max-height: 40px;
       transition: .5s ease-out;
-      background-color: #242943;
+      background-color: $mainFirst-color;
       &:hover {
         transition: .5s ease;
-        background-color: #e97770; //rgba(223, 62, 81, 1);	
+        background-color: $mainSecond-color; 
       }
       &:nth-child(6) {
-        background-color: #e97770; //rgba(225, 59, 80, 1);
-        color: white;
+        background-color: $mainSecond-color; 
+        color: $mainThird-color;
         &:hover {
           transition: .5s ease;
-          background-color: #242943;
+          background-color: $mainFirst-color;
             }
           }
         }
@@ -105,6 +97,9 @@ section.main {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    @media (max-width: 50em) {
+      width: 100%;
+    }
   }
   .train {
     width: 100%;
@@ -113,21 +108,21 @@ section.main {
       width: 100%;
       height: 100%;
       margin-bottom: 0.2em;
-      background-color: #242943;
+      background-color: $mainFirst-color;
       justify-content: center;
       align-items: center;
       a {
         text-decoration: none;
-        color: black;
+        color: white;
         padding: 1em;
-        border: 1px solid black;
+        border: 1px solid $mainThird-color;
       }
     }
     .text2 {
       width: 100%;
       height: 100%;
       margin-top: 0.2em;
-      background-image: url(../pictures/background/pic5.jpg);
+      background-image: url(../pictures/background/dumbbells-1634750_1280.jpg);
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -144,12 +139,23 @@ section.main2 {
   height: 25em;
   .train2 {
     width: 75%;
-    background-color: #242943;
+    background-color: $mainFirst-color;
     margin-right: 0.2em;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: 50em) {
+      width: 100%;
+    }
+    a {
+      text-decoration: none;
+      color: white;
+      padding: 1em;
+      border: 1px solid $mainThird-color;
+    }
   }
     .train3 {
     width: 100%;
-    background-color: #242943;
+    background-color: $mainFirst-color;
     margin-left: 0.2em;
     background-image: url(../pictures/background/pic6.jpg);
     background-position: center;
@@ -157,4 +163,74 @@ section.main2 {
     background-repeat: no-repeat;
   
   }
+}
+
+/* _-_-_-_-_  section main-icons _-_-_-_-_  */
+section.main-icons {
+  flex-direction: column;
+  margin: 0.4em;
+  height: 40em;
+  justify-content: center;
+  align-items: center;
+  background-color: $mainFirst-color;
+  .icons_title {
+    width: 100%;
+    height: 15%;
+    border: 1px solid $mainThird-color;
+    justify-content: center;
+    align-items: center;
+    h2 {
+      font-size: 2em;
+      color: white;
+      border-bottom: 3px solid $mainSecond-color;
+    }
+  }
+  .icons {
+    flex-wrap: wrap;
+    width: 90%;
+    height: 100%;
+    .icon_gym {
+      flex: 1 1 calc(33.33%);
+      display: flex;
+      border: 1px solid $mainThird-color;
+      width: 50%;
+      height: 50%;
+      justify-content: center;
+      align-items: center;
+      p {
+        color: $mainThird-color;
+      }
+    }
+  }
+}
+
+/* _-_-_-_-_  section Opinions _-_-_-_-_  */
+section.Opinions {
+  height: 30em;
+  width: 100%;
+  background-color: $mainFirst-color;
+  }  
+
+/* _-_-_-_-_  section Map _-_-_-_-_  */
+
+section.Google_Map {
+    height: 25em;
+    width: 100%;
+    background-color: $mainFirst-color;
+    .map {
+      width: 100%;
+      height: 100%;
+      background-image: url(../pictures/background/mapa%20google%20makieta.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+  }
+}  
+  
+/* _-_-_-_-_  Footer section _-_-_-_-_  */
+
+footer.contact {
+  height: 25em;
+  width: 100%;
+  background-color: $mainFirst-color;
 }
