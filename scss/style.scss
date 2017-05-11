@@ -18,7 +18,19 @@ $mainThird-color: #ffffff;
   display: -webkit-flex;
   display: flex;
 }
+/* _-_-_-_-_ Body _-_-_-_-_  */
 
+body {
+  @media (max-width: 60em) {
+  font-size: 14px;
+  }
+  @media (max-width: 42em) {
+  font-size: 12px;
+  }
+  @media (max-width: 28em) {
+    font-size: 10px;
+  }
+}
 
 /* _-_-_-_-_ Header section _-_-_-_-_  */
 
@@ -73,6 +85,7 @@ header {
       }
       .Motivation {
         h1 {
+          display: none;
           font-size: 3em;
           color: black;
           span {
@@ -146,6 +159,9 @@ section.main2 {
     @media (max-width: 50em) {
       width: 100%;
     }
+    @media (max-width: 28em) {
+      display: none;
+    }
     a {
       text-decoration: none;
       color: white;
@@ -168,37 +184,89 @@ section.main2 {
 /* _-_-_-_-_  section main-icons _-_-_-_-_  */
 section.main-icons {
   flex-direction: column;
-  margin: 0.4em;
-  height: 40em;
+  margin: 0.3em 0.4em 0.4em 0.4em;
+  height: 42em;
   justify-content: center;
   align-items: center;
   background-color: $mainFirst-color;
+  @media (max-width: 36em) {
+    height: 70em;
+  }
   .icons_title {
     width: 100%;
     height: 15%;
-    border: 1px solid $mainThird-color;
+    border-bottom: 0.15em solid $mainThird-color;
     justify-content: center;
     align-items: center;
+    @media (max-width: 36em) {
+      justify-content: flex-start;
+      padding-left: 6.5em;
+    }
+    @media (max-width: 28em) {
+      justify-content: flex-start;
+      padding-left: 3em;
+    }
     h2 {
       font-size: 2em;
       color: white;
-      border-bottom: 3px solid $mainSecond-color;
+      border-bottom: 2px solid $mainSecond-color;
     }
   }
   .icons {
     flex-wrap: wrap;
     width: 90%;
     height: 100%;
-    .icon_gym {
-      flex: 1 1 calc(33.33%);
+    .features  {
       display: flex;
-      border: 1px solid $mainThird-color;
-      width: 50%;
+      flex: 1 calc(33.33%);
+      width: 15%;
       height: 50%;
       justify-content: center;
       align-items: center;
-      p {
-        color: $mainThird-color;
+      @media (max-width: 56em) {
+        margin-top: 2em;
+        flex: 1 calc(35%);
+        height: 25%;
+      }
+      @media (max-width: 36em) {
+        margin-top: 2em;
+        flex: 1 calc(51%);
+        height: 10%;
+      }
+      span {
+        position: relative;
+      .icon_svg {
+        padding: 0 2.6em;
+        height: 3.5em;
+        width: 3.5em;
+        position: relative;
+        }
+      }
+      span::after {
+        transform: rotate(45deg);
+        border-radius: 0.25rem;
+        border: solid 2px $mainThird-color;
+        content: '';
+        display: block;
+        height: 6em;
+        left: 10%;
+        margin: -2em 0 0 0.3em;
+        position: absolute;
+        top: 15%;
+        width: 6em;
+      }
+      .content {
+        padding: 0 2em 0 1em;
+        display: flex;
+        flex-direction: column;
+        h3 {
+          justify-content: flex-start;
+          padding: 0.6em 0;
+          font-size: 1.5em;
+        }
+        p {
+          color: $mainThird-color;
+        }
       }
     }
   }
@@ -208,6 +276,7 @@ section.main-icons {
 section.Opinions {
   height: 30em;
   width: 100%;
+  //padding: 0.4em;
   background-color: $mainFirst-color;
   }  
 
@@ -226,11 +295,188 @@ section.Google_Map {
       background-repeat: no-repeat;
   }
 }  
-  
+/* _-_-_-_-_  section Contact _-_-_-_-_  */
+
+section.contact {
+  height: 40em;
+  width: 100%;
+  flex-direction: row;
+  @media (max-width: 50em) {
+    height: 70em;
+    flex-direction: column;
+  }
+  article.field {
+    background-color: $mainFirst-color;
+    margin: 0.4em 0.2em 0.4em 0.4em;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    form {
+      justify-content: center;
+      align-items: center;
+      width: 75%;
+      flex-flow: wrap;
+      .field_up {
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: 50em) {
+          flex-direction: column;
+        }
+        width: 100%;
+        .field_second_half,
+        .field_first_half{
+          width: 46%;
+          @media (max-width: 50em) {
+            width: 100%;
+          }
+          label {
+            margin-right: auto;
+            color: $mainThird-color;
+            font-size: 1.15em;
+            text-transform: uppercase;
+          }
+          input {
+            width: 100%;
+            height: 2.4em;
+            margin: 0.7em 0;
+            background-color: rgba(212, 212, 255, 0.035);
+            border: none;
+            color: $mainThird-color;
+            font-size: 1.2em;
+            &:focus {
+              outline: 1px solid $mainSecond-color;
+            }
+          }
+        }
+      }
+      .field_text {
+        width: 100%;
+        margin-top: 1em;
+        label {
+          margin-right: auto;
+          color: $mainThird-color;
+          font-size: 1.2em;
+          text-transform: uppercase;
+        }
+        textarea {
+          width: 100%;
+          margin: 0.7em 0;
+          background-color: rgba(212, 212, 255, 0.035);
+          border: none;
+          color: $mainThird-color;
+          font-size: 1.7em;
+          &:focus {
+            outline: 1px solid $mainSecond-color;
+          }
+        }
+      }
+      .action {
+        flex-flow: wrap;
+        margin-top: 1.5em;
+        margin-left: 0.05em;
+        margin-right: auto;
+        align-items: center;
+      .special {
+        cursor: pointer;
+        background-color: $mainThird-color;
+        border: none;
+        text-align: center;
+        font-size: 0.8em;
+        font-weight: 600;
+        height: 3.5em;
+        padding: 0 1.75em;
+        letter-spacing: 0.3em;
+        transition: background-color 0.2s ease-in-out;
+          &:hover {
+            background-color: $mainSecond-color; 
+          }
+        }
+        .clear {
+        cursor: pointer;
+        margin-left: 1.2em;
+        border: 0;
+        background-color: transparent;
+        height: 3.25em;
+        font-size: 0.8em;
+        padding: 0 1.75em;
+        letter-spacing: 0.3em;
+        box-shadow: 0 0 0 2px $mainThird-color; 
+        color: $mainThird-color;
+        transition: box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+          &:hover {
+          color: $mainSecond-color;
+          box-shadow: 0 0 0 2px $mainSecond-color; 
+          }
+        }
+      }      
+    }
+  }
+}
+  article.call_contact {
+    background-color: $mainFirst-color;
+    margin: 0.4em 0.4em 0.4em 0.2em;
+    width: 60%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    @media (max-width: 50em) {
+      height: 70%;
+      width: 100%;
+      margin: 0 1em 0 0.4em;
+    }
+    .cont {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+      justify-content: center;
+      color: $mainThird-color;
+      align-items: flex-start;
+      border: 1px solid $mainThird-color;
+      /*@media (max-width: 50em) {
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: row;
+      }*/
+      span {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-left: 5em;
+        @media (max-width: 50em) {
+          //padding-left: 0;
+          font-size: 1.2em;
+        }
+        img {
+          width: 2.5em;
+          height: 2.5em;
+        }
+        h3 {
+          font-size: 1.5em;
+          padding-left: 0.5em;
+        }
+      }
+      p {
+        padding-top: 0.8em;
+        padding-left: 8.3em;
+        /*@media (max-width: 50em) {
+          padding-left: 0;
+        }*/
+      }
+  }
+}
 /* _-_-_-_-_  Footer section _-_-_-_-_  */
 
-footer.contact {
-  height: 25em;
+footer {
+  margin-top: 0.8em;
+  height: 10em;
   width: 100%;
   background-color: $mainFirst-color;
+  @media (max-width: 50em) {
+    width: 100%;
+    margin: 0.4em 0.4em 0.4em 0.4em;
+  }
+  
 }
