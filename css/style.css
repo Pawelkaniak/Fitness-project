@@ -429,11 +429,64 @@ article.call_contact {
 
 /* _-_-_-_-_  Footer section _-_-_-_-_  */
 footer {
-  margin-top: 0.8em;
-  height: 10em;
-  width: 100%;
-  background-color: #242943; }
+  margin: 0.8em 0.4em 0.4em 0.4em;
+  overflow: hidden;
+  height: 15em;
+  width: 99.2%;
+  background-color: #242943;
+  justify-content: center;
+  align-items: center; }
   @media (max-width: 50em) {
     footer {
       width: 100%;
       margin: 0.4em 0.4em 0.4em 0.4em; } }
+  footer article {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    footer article ul {
+      width: 100%;
+      justify-content: center;
+      align-items: center; }
+      footer article ul li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 3.2em;
+        height: 3.2em;
+        background-color: #ffffff;
+        border-radius: 50%;
+        margin: 1em;
+        transition: 0.2s ease-in-out; }
+        footer article ul li:hover {
+          background-color: #e97770;
+          transition: 0.2s ease-in-out; }
+        footer article ul li a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100%; }
+          footer article ul li a img {
+            width: 1.4em;
+            height: 1.4em; }
+    footer article .AllRightsRes {
+      justify-content: center;
+      align-items: center;
+      flex-direction: row; }
+      footer article .AllRightsRes p {
+        padding: 0 0.8em;
+        font-size: 1.1em;
+        color: #ffffff;
+        border-left: 1px solid #ffffff;
+        border-right: 1px solid #ffffff; }
+        @media (max-width: 50em) {
+          footer article .AllRightsRes p {
+            padding: 0 0.3em; } }
+        footer article .AllRightsRes p a {
+          text-decoration: none;
+          color: #ffffff; }
+          footer article .AllRightsRes p a:hover {
+            border-bottom: 1px solid #ffffff; }
